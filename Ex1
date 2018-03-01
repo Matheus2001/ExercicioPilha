@@ -16,3 +16,5 @@ class Pilha:
 
     def lenght(self):
         return len(self.items)
+        
+Print (pilha.push)
