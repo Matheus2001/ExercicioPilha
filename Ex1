@@ -1,20 +1,21 @@
-class Pilha:
+class Pilha(object):
     def __init__(self):
-        self.items = []
-
-    def isVazio(self):
-        return self.items == 0
-
-    def push(self, item):
-        self.items.append(item)
-
-    def pop(self):
-        return self.items.pop()
-
-    def peek(self):
-        return self.items[len(self.items)-1]
-
-    def lenght(self):
-        return len(self.items)
+        self.dados = []
+ 
+    def empilha(self, elemento):
+        self.dados.append(elemento)
+ 
+    def desempilha(self):
+        if not self.vazia():
+            return self.dados.pop(-1)
+ 
+    def vazia(self):
+        return len(self.dados) == 0
         
-Print (pilha.push)
+pilha = Pilha()
+pilha.empilha(1)
+pilha.empilha(2)
+pilha.empilha(3)
+pilha.desempilha()
+
+print (pilha)
